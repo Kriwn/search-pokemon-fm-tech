@@ -55,10 +55,9 @@ function flattenEvolutions(evolutions: RawEvolution[] | null | undefined): Evolu
 
 		// Recursively flatten children
 		if (evo.evolutions && evo.evolutions.length > 0) {
-			result.push(...flattenEvolutions(evo.evolutions));
+			result.push(...(evo.evolutions));
 		}
 	}
-
 	return result;
 }
 
